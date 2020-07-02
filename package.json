@@ -1,0 +1,54 @@
+{
+  "name": "desktop.admin-manager.blackboard-th",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "electron-is-dev": "^1.2.0",
+    "electron-log": "^4.2.2",
+    "source-map-support": "^0.5.19"
+  },
+  "main": "build/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.blackboard-th.admin.manager",
+    "productName": "Blackboard-TH Manager",
+    "mac": {
+      "icon": "./build/icons/mac/icon.icns",    
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "icon": "./build/icons/win/icon.ico"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "workspaces": [
+    "src/*"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "electron": "^9.0.5",
+    "electron-builder": "^22.7.0",
+    "prettier": "^2.0.5",
+    "wait-on": "^5.0.1"
+  }
+}
